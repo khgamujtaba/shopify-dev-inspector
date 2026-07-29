@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // Update the popup based on the structured response from the content script.
       if (storeInfo?.isShopify) {
-        platformElement.textContent = '✅ Shopify Store';
+        platformElement.textContent = storeInfo.platformLabel || 'Shopify Theme Store';
         platformElement.classList.remove('status-shopify', 'status-not-shopify');
         platformElement.classList.add('status-shopify');
 

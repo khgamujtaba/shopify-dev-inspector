@@ -53,15 +53,30 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 // Build the store information object from Shopify data.
 function buildStoreInfo(shopifyData) {
-  if (!shopifyData || !shopifyData.themeName) {
-    return { isShopify: false };
+  if (!shopifyData || !shopifyData.isShopify) {
+    return {
+      isShopify: false,
+      platformLabel: '❌ Not a Shopify Store'
+    };
+  }
+
+  if (shopifyData.detectedPlatform === 'shopify-theme-store') {
+    return {
+      isShopify: true,
+      platformLabel: shopifyData.platformLabel || 'Shopify Theme Store',
+      themeName: shopifyData.themeName || 'Not Exposed',
+      themeVersion: shopifyData.themeVersion || 'Not Exposed',
+      language: shopifyData.language || shopifyData.locale || 'Not Exposed',
+      currency: shopifyData.currencyCode || 'Not Exposed'
+    };
   }
 
   return {
     isShopify: true,
-    themeName: shopifyData.themeName || 'Unknown',
-    themeVersion: shopifyData.themeVersion || 'Not Available',
-    language: shopifyData.language || shopifyData.locale || 'Not Available',
-    currency: shopifyData.currencyCode || 'Not Available'
+    platformLabel: shopifyData.platformLabel || '🟣 Shopify Hydrogen/Oxygen',
+    themeName: shopifyData.themeName || 'Not Exposed',
+    themeVersion: shopifyData.themeVersion || 'Not Exposed',
+    language: shopifyData.language || 'Not Exposed',
+    currency: shopifyData.currency || 'Not Exposed'
   };
 }
