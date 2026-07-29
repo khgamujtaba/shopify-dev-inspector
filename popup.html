@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Extension Popup</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup-container">
+      <h1>Current Tab</h1>
+
+      <p class="label">Title</p>
+      <p id="tab-title" class="value">Loading...</p>
+
+      <p class="label">URL</p>
+      <p id="tab-url" class="value">Loading...</p>
+
+      <p class="label">Platform</p>
+      <p id="platform-status" class="value">Checking...</p>
+
+      <div id="shopify-details" class="details hidden">
+        <p class="label">Theme Name</p>
+        <p id="theme-name" class="value">Loading...</p>
+
+        <p class="label">Theme Version</p>
+        <p id="theme-version" class="value">Loading...</p>
+
+        <p class="label">Store Language</p>
+        <p id="store-language" class="value">Loading...</p>
+
+        <p class="label">Store Currency</p>
+        <p id="store-currency" class="value">Loading...</p>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
