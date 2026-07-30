@@ -16,24 +16,43 @@ window.addEventListener('message', (event) => {
 
   // Wait for window.Shopify to become available, checking every 100ms, timeout after 2 seconds.
   waitForShopify(2000).then((shopifyObj) => {
-    const themeStoreData = shopifyObj
-      ? {
-          detectedPlatform: 'shopify-theme-store',
-          platformLabel: 'Shopify Theme Store',
-          isShopify: true,
-          themeName: shopifyObj.theme?.schema_name || shopifyObj.theme?.name || null,
-          themeVersion: shopifyObj.theme?.schema_version || null,
-          locale: shopifyObj.locale || null,
-          language: shopifyObj.language || null,
-          currencyCode: shopifyObj.currency?.code || shopifyObj.currency?.active || null
-        }
-      : null;
+    // Detect Hydrogen/Oxygen first.
+const hydrogenData = detectHydrogenOxygen();
 
-    const responseData = themeStoreData || detectHydrogenOxygen() || {
-      detectedPlatform: 'not-shopify',
-      platformLabel: '❌ Not a Shopify Store',
-      isShopify: false
-    };
+// A Theme Store must expose a theme object.
+const themeStoreData =
+  shopifyObj?.theme
+    ? {
+        detectedPlatform: 'shopify-theme-store',
+        platformLabel: 'Shopify Theme Store',
+        isShopify: true,
+        themeName: shopifyObj.theme.schema_name || shopifyObj.theme.name || null,
+        themeVersion: shopifyObj.theme.schema_version || null,
+        locale: shopifyObj.locale || null,
+        language: shopifyObj.language || null,
+        currencyCode: shopifyObj.currency?.code || shopifyObj.currency?.active || null
+      }
+    : null;
+
+// Decide which platform to report.
+const responseData =
+  hydrogenData ||
+  themeStoreData ||
+  (shopifyObj
+    ? {
+        detectedPlatform: 'shopify-store',
+        platformLabel: '🟦 Shopify Store',
+        isShopify: true,
+        themeName: null,
+        themeVersion: null,
+        language: detectLanguage(),
+        currencyCode: detectCurrency()
+      }
+    : {
+        detectedPlatform: 'not-shopify',
+        platformLabel: '❌ Not a Shopify Store',
+        isShopify: false
+      });
 
     // Send the data back to content.js.
     window.postMessage(
@@ -65,40 +84,49 @@ async function waitForShopify(timeoutMs) {
 }
 
 function detectHydrogenOxygen() {
-  const scriptSources = Array.from(document.scripts || [])
-    .map((script) => (script.src || script.textContent || '').toLowerCase())
-    .join(' ');
-  const linkSources = Array.from(document.querySelectorAll('link[rel="modulepreload"], link[rel="preload"]'))
-    .map((link) => (link.href || '').toLowerCase())
-    .join(' ');
-  const metaSources = Array.from(document.querySelectorAll('meta'))
-    .map((meta) => `${meta.name || ''} ${meta.content || ''}`.toLowerCase())
-    .join(' ');
-  const sourceText = `${document.documentElement?.outerHTML || ''} ${scriptSources} ${linkSources} ${metaSources}`;
+  // Strong indicators that a storefront is using Hydrogen/Oxygen.
+  const strongSignals = [];
 
-  const signals = [];
-
-  if (/(hydrogen|oxygen)/i.test(sourceText)) {
-    signals.push('runtime');
-  }
-
-  if (/(shopify.*(storefront|graphql|api)|storefront.*shopify)/i.test(sourceText)) {
-    signals.push('storefront-api');
-  }
-
-  if (document.querySelector('meta[name="generator"][content*="Hydrogen"]')) {
-    signals.push('meta-generator');
-  }
-
-  if (document.querySelector('meta[name="shopify-checkout-api-token"], meta[name="shopify-currency"]')) {
-    signals.push('shopify-meta');
-  }
-
+  // 1. Official Hydrogen global objects.
   if (window.__HYDROGEN__ || window.__SHOPIFY_HYDROGEN__ || window.__oxygen__) {
-    signals.push('global-object');
+    strongSignals.push('global-object');
   }
 
-  if (signals.length < 2) {
+  // 2. Official Hydrogen generator meta tag.
+  const generatorMeta = document.querySelector('meta[name="generator"]');
+  if (generatorMeta?.content?.toLowerCase().includes('hydrogen')) {
+    strongSignals.push('generator-meta');
+  }
+
+  // 3. Look for Hydrogen/Oxygen in JavaScript bundle URLs.
+  const scriptUrls = Array.from(document.scripts)
+    .map(script => script.src.toLowerCase());
+
+  if (
+    scriptUrls.some(url =>
+      url.includes('hydrogen') ||
+      url.includes('oxygen')
+    )
+  ) {
+    strongSignals.push('script-url');
+  }
+
+  // 4. Look for Hydrogen/Oxygen in module preload URLs.
+  const preloadUrls = Array.from(
+    document.querySelectorAll('link[rel="modulepreload"], link[rel="preload"]')
+  ).map(link => (link.href || '').toLowerCase());
+
+  if (
+    preloadUrls.some(url =>
+      url.includes('hydrogen') ||
+      url.includes('oxygen')
+    )
+  ) {
+    strongSignals.push('module-preload');
+  }
+
+  // If no strong evidence exists, don't classify as Hydrogen.
+  if (strongSignals.length === 0) {
     return null;
   }
 
@@ -109,7 +137,7 @@ function detectHydrogenOxygen() {
     themeName: 'Not Exposed',
     themeVersion: 'Not Exposed',
     language: detectLanguage() || 'Not Exposed',
-    currency: detectCurrency() || 'Not Exposed'
+    currencyCode: detectCurrency() || 'Not Exposed'
   };
 }
 

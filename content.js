@@ -63,20 +63,22 @@ function buildStoreInfo(shopifyData) {
   if (shopifyData.detectedPlatform === 'shopify-theme-store') {
     return {
       isShopify: true,
+      detectedPlatform: shopifyData.detectedPlatform,
       platformLabel: shopifyData.platformLabel || 'Shopify Theme Store',
       themeName: shopifyData.themeName || 'Not Exposed',
       themeVersion: shopifyData.themeVersion || 'Not Exposed',
       language: shopifyData.language || shopifyData.locale || 'Not Exposed',
-      currency: shopifyData.currencyCode || 'Not Exposed'
+      currencyCode: shopifyData.currencyCode || 'Not Exposed'
     };
   }
 
   return {
     isShopify: true,
+    detectedPlatform: shopifyData.detectedPlatform,
     platformLabel: shopifyData.platformLabel || '🟣 Shopify Hydrogen/Oxygen',
     themeName: shopifyData.themeName || 'Not Exposed',
     themeVersion: shopifyData.themeVersion || 'Not Exposed',
     language: shopifyData.language || 'Not Exposed',
-    currency: shopifyData.currency || 'Not Exposed'
+    currencyCode: shopifyData.currencyCode || shopifyData.currency || 'Not Exposed'
   };
 }

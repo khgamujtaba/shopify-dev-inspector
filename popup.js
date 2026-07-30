@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
   // Find the UI elements that will display tab information.
+  const headlessMessage = document.getElementById('headless-message');
   const titleElement = document.getElementById('tab-title');
   const urlElement = document.getElementById('tab-url');
   const platformElement = document.getElementById('platform-status');
@@ -40,22 +41,45 @@ document.addEventListener('DOMContentLoaded', async () => {
       const storeInfo = await chrome.tabs.sendMessage(activeTab.id, { type: 'get-store-info' });
 
       // Update the popup based on the structured response from the content script.
-      if (storeInfo?.isShopify) {
-        platformElement.textContent = storeInfo.platformLabel || 'Shopify Theme Store';
-        platformElement.classList.remove('status-shopify', 'status-not-shopify');
-        platformElement.classList.add('status-shopify');
+     if (storeInfo?.isShopify) {
 
-        detailsContainer.classList.remove('hidden');
-        themeNameElement.textContent = storeInfo.themeName || 'Not Available';
-        themeVersionElement.textContent = storeInfo.themeVersion || 'Not Available';
-        languageElement.textContent = storeInfo.language || 'Not Available';
-        currencyElement.textContent = storeInfo.currency || 'Not Available';
-      } else {
-        platformElement.textContent = '❌ Not a Shopify Store';
-        platformElement.classList.remove('status-shopify', 'status-not-shopify');
-        platformElement.classList.add('status-not-shopify');
-        detailsContainer.classList.add('hidden');
-      }
+  platformElement.textContent = storeInfo.platformLabel || 'Shopify';
+  platformElement.classList.remove('status-shopify', 'status-not-shopify');
+  platformElement.classList.add('status-shopify');
+
+  // Hide everything first
+  detailsContainer.classList.add('hidden');
+  headlessMessage.classList.add('hidden');
+
+  // Shopify Theme Store
+  if (storeInfo.detectedPlatform === 'shopify-theme-store') {
+
+    detailsContainer.classList.remove('hidden');
+
+    themeNameElement.textContent = storeInfo.themeName || 'Not Exposed';
+    themeVersionElement.textContent = storeInfo.themeVersion || 'Not Exposed';
+    languageElement.textContent = storeInfo.language || 'Not Exposed';
+    currencyElement.textContent = storeInfo.currencyCode || 'Not Exposed';
+
+  }
+
+  // Shopify Hydrogen / Oxygen
+  else if (storeInfo.detectedPlatform === 'shopify-hydrogen') {
+
+    headlessMessage.classList.remove('hidden');
+
+  }
+
+} else {
+
+  platformElement.textContent = '❌ Not a Shopify Store';
+
+  platformElement.classList.remove('status-shopify', 'status-not-shopify');
+  platformElement.classList.add('status-not-shopify');
+
+  detailsContainer.classList.add('hidden');
+  headlessMessage.classList.add('hidden');
+}
     } catch (shopifyError) {
       // If Shopify detection fails (e.g., on Chrome pages, new tab), mark as non-Shopify.
       console.log('Could not detect Shopify (this is normal on special pages):', shopifyError.message);
