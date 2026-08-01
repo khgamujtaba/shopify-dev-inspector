@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Basic Chrome Extension",
+  "name": "Shopify Dev Inspector",
   "version": "1.0.0",
-  "description": "A minimal Manifest V3 Chrome extension",
+  "description": "Inspect Shopify stores, detect themes, identify Hydrogen storefronts, and view key store information.",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
   "content_scripts": [

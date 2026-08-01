@@ -24,7 +24,7 @@ const themeStoreData =
   shopifyObj?.theme
     ? {
         detectedPlatform: 'shopify-theme-store',
-        platformLabel: 'Shopify Theme Store',
+        platformLabel: '🟦 Shopify',
         isShopify: true,
         themeName: shopifyObj.theme.schema_name || shopifyObj.theme.name || null,
         themeVersion: shopifyObj.theme.schema_version || null,

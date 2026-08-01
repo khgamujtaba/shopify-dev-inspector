@@ -64,7 +64,7 @@ function buildStoreInfo(shopifyData) {
     return {
       isShopify: true,
       detectedPlatform: shopifyData.detectedPlatform,
-      platformLabel: shopifyData.platformLabel || 'Shopify Theme Store',
+      platformLabel: shopifyData.platformLabel || '🟦 Shopify',
       themeName: shopifyData.themeName || 'Not Exposed',
       themeVersion: shopifyData.themeVersion || 'Not Exposed',
       language: shopifyData.language || shopifyData.locale || 'Not Exposed',
