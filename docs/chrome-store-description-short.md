@@ -1,0 +1,1 @@
+Inspect Shopify stores, detect themes, identify Hydrogen storefronts, and view key store information instantly.
