@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const themeVersionElement = document.getElementById('theme-version');
   const languageElement = document.getElementById('store-language');
   const currencyElement = document.getElementById('store-currency');
+  const appDetectionsContainer = document.getElementById('app-detections');
+  const appsListElement = document.getElementById('apps-list');
 
   // Stop early if the popup markup is missing.
-  if (!titleElement || !urlElement || !platformElement || !detailsContainer) {
+  if (!titleElement || !urlElement || !platformElement || !detailsContainer || !appDetectionsContainer || !appsListElement) {
     return;
   }
 
@@ -43,43 +45,51 @@ document.addEventListener('DOMContentLoaded', async () => {
       // Update the popup based on the structured response from the content script.
      if (storeInfo?.isShopify) {
 
-  platformElement.textContent = storeInfo.platformLabel || 'Shopify';
-  platformElement.classList.remove('status-shopify', 'status-not-shopify');
-  platformElement.classList.add('status-shopify');
+    platformElement.textContent = storeInfo.platformLabel || 'Shopify';
+    platformElement.classList.remove('status-shopify', 'status-not-shopify');
+    platformElement.classList.add('status-shopify');
 
-  // Hide everything first
-  detailsContainer.classList.add('hidden');
-  headlessMessage.classList.add('hidden');
+    // Hide everything first
+    detailsContainer.classList.add('hidden');
+    headlessMessage.classList.add('hidden');
+    appDetectionsContainer.classList.add('hidden');
+    appsListElement.innerHTML = '';
 
-  // Shopify Theme Store
-  if (storeInfo.detectedPlatform === 'shopify-theme-store') {
+    // Shopify Theme Store
+    if (storeInfo.detectedPlatform === 'shopify-theme-store') {
+      detailsContainer.classList.remove('hidden');
 
-    detailsContainer.classList.remove('hidden');
+      themeNameElement.textContent = storeInfo.themeName || 'Not Exposed';
+      themeVersionElement.textContent = storeInfo.themeVersion || 'Not Exposed';
+      languageElement.textContent = storeInfo.language || 'Not Exposed';
+      currencyElement.textContent = storeInfo.currencyCode || 'Not Exposed';
+    }
 
-    themeNameElement.textContent = storeInfo.themeName || 'Not Exposed';
-    themeVersionElement.textContent = storeInfo.themeVersion || 'Not Exposed';
-    languageElement.textContent = storeInfo.language || 'Not Exposed';
-    currencyElement.textContent = storeInfo.currencyCode || 'Not Exposed';
+    // Shopify Hydrogen / Oxygen
+    else if (storeInfo.detectedPlatform === 'shopify-hydrogen') {
+      headlessMessage.classList.remove('hidden');
+    }
 
+    const detectedApps = (Array.isArray(storeInfo.apps) ? storeInfo.apps : []).filter((app) => app.detected);
+    if (detectedApps.length > 0) {
+      appDetectionsContainer.classList.remove('hidden');
+      appsListElement.innerHTML = detectedApps
+        .map((app) => `<span class="app-badge">${app.name}</span>`)
+        .join('');
+    }
+
+  } else {
+
+    platformElement.textContent = '❌ Not a Shopify Store';
+
+    platformElement.classList.remove('status-shopify', 'status-not-shopify');
+    platformElement.classList.add('status-not-shopify');
+
+    detailsContainer.classList.add('hidden');
+    headlessMessage.classList.add('hidden');
+    appDetectionsContainer.classList.add('hidden');
+    appsListElement.innerHTML = '';
   }
-
-  // Shopify Hydrogen / Oxygen
-  else if (storeInfo.detectedPlatform === 'shopify-hydrogen') {
-
-    headlessMessage.classList.remove('hidden');
-
-  }
-
-} else {
-
-  platformElement.textContent = '❌ Not a Shopify Store';
-
-  platformElement.classList.remove('status-shopify', 'status-not-shopify');
-  platformElement.classList.add('status-not-shopify');
-
-  detailsContainer.classList.add('hidden');
-  headlessMessage.classList.add('hidden');
-}
     } catch (shopifyError) {
       // If Shopify detection fails (e.g., on Chrome pages, new tab), mark as non-Shopify.
       console.log('Could not detect Shopify (this is normal on special pages):', shopifyError.message);
@@ -87,6 +97,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       platformElement.classList.remove('status-shopify', 'status-not-shopify');
       platformElement.classList.add('status-not-shopify');
       detailsContainer.classList.add('hidden');
+      appDetectionsContainer.classList.add('hidden');
+      appsListElement.innerHTML = '';
     }
   } catch (error) {
     // Show a friendly message if something goes wrong getting the tab info.

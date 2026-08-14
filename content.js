@@ -56,8 +56,9 @@ function buildStoreInfo(shopifyData) {
   if (!shopifyData || !shopifyData.isShopify) {
     return {
       isShopify: false,
-      platformLabel: '❌ Not a Shopify Store'
-    };
+      platformLabel: '❌ Not a Shopify Store',
+      apps: []
+    }
   }
 
   if (shopifyData.detectedPlatform === 'shopify-theme-store') {
@@ -68,7 +69,8 @@ function buildStoreInfo(shopifyData) {
       themeName: shopifyData.themeName || 'Not Exposed',
       themeVersion: shopifyData.themeVersion || 'Not Exposed',
       language: shopifyData.language || shopifyData.locale || 'Not Exposed',
-      currencyCode: shopifyData.currencyCode || 'Not Exposed'
+      currencyCode: shopifyData.currencyCode || 'Not Exposed',
+      apps: shopifyData.apps || []
     };
   }
 
@@ -79,6 +81,7 @@ function buildStoreInfo(shopifyData) {
     themeName: shopifyData.themeName || 'Not Exposed',
     themeVersion: shopifyData.themeVersion || 'Not Exposed',
     language: shopifyData.language || 'Not Exposed',
-    currencyCode: shopifyData.currencyCode || shopifyData.currency || 'Not Exposed'
+    currencyCode: shopifyData.currencyCode || shopifyData.currency || 'Not Exposed',
+    apps: shopifyData.apps || []
   };
 }

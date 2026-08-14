@@ -34,34 +34,41 @@ const themeStoreData =
       }
     : null;
 
-// Decide which platform to report.
-const responseData =
-  hydrogenData ||
-  themeStoreData ||
-  (shopifyObj
-    ? {
-        detectedPlatform: 'shopify-store',
-        platformLabel: '🟦 Shopify Store',
-        isShopify: true,
-        themeName: null,
-        themeVersion: null,
-        language: detectLanguage(),
-        currencyCode: detectCurrency()
-      }
-    : {
-        detectedPlatform: 'not-shopify',
-        platformLabel: '❌ Not a Shopify Store',
-        isShopify: false
-      });
+  const appDetections =
+    typeof window.detectShopifyApps === 'function'
+      ? window.detectShopifyApps()
+      : [];
 
-    // Send the data back to content.js.
-    window.postMessage(
-      {
-        type: 'SHOPIFY_RESPONSE',
-        data: responseData
-      },
-      '*'
-    );
+  // Decide which platform to report.
+  const responseData =
+    hydrogenData ||
+    themeStoreData ||
+    (shopifyObj
+      ? {
+          detectedPlatform: 'shopify-store',
+          platformLabel: '🟦 Shopify Store',
+          isShopify: true,
+          themeName: null,
+          themeVersion: null,
+          language: detectLanguage(),
+          currencyCode: detectCurrency()
+        }
+      : {
+          detectedPlatform: 'not-shopify',
+          platformLabel: '❌ Not a Shopify Store',
+          isShopify: false
+        });
+
+  responseData.apps = Array.isArray(appDetections) ? appDetections : [];
+
+  // Send the data back to content.js.
+  window.postMessage(
+    {
+      type: 'SHOPIFY_RESPONSE',
+      data: responseData
+    },
+    '*'
+  );
   });
 });
 

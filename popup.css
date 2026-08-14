@@ -37,6 +37,21 @@ h1 {
   padding-top: 8px;
 }
 
+.apps-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.app-badge {
+  padding: 4px 8px;
+  background: #e5e7eb;
+  border-radius: 9999px;
+  font-size: 12px;
+  color: #111827;
+}
+
 .status-shopify {
   color: #047857;
   font-weight: bold;

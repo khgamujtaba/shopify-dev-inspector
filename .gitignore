@@ -10,3 +10,8 @@ build/
 
 # Zip files
 *.zip
+
+# Videos
+*.mp4
+*.mov
+*.mkv
