@@ -1,0 +1,14 @@
+{
+  "cases": [
+    { "id": "pagefly-official-demo", "url": "https://demo.pagefly.io/", "appId": "pagefly-landing-page-builder", "pageType": "homepage", "provenance": "Official PageFly Shopify App Store demo store", "missingEvidenceState": "FAIL" },
+    { "id": "17track-official-demo-tracking-page", "url": "https://17track.myshopify.com/apps/17TRACK?nums=YQTRACKTEST9999", "appId": "17track-order-tracking", "pageType": "tracking", "provenance": "Official 17TRACK Shopify App Store demo store tracking page", "missingEvidenceState": "INCONCLUSIVE" },
+    { "id": "tentree-triple-whale", "url": "https://www.tentree.com/", "appId": "triple-whale", "pageType": "homepage", "provenance": "Public storefront observed with TriplePixelData configuration", "missingEvidenceState": "FAIL" },
+    { "id": "monstertransmission-reconvert", "url": "https://monstertransmission.com/", "appId": "reconvert-upsell-cross-sell", "pageType": "homepage", "provenance": "Public storefront listed as a ReConvert user by storeleads.app, observed loading reconvert-cdn.com", "missingEvidenceState": "INCONCLUSIVE" },
+    { "id": "catwwr-instafeed", "url": "https://catwwr.com/", "appId": "instafeed", "pageType": "homepage", "provenance": "Public storefront listed as a live Instafeed example by minttstudio.com, observed loading cdn.nfcube.com", "missingEvidenceState": "INCONCLUSIVE" },
+    { "id": "ecomposer-io-self-hosted", "url": "https://ecomposer.io/", "appId": "ecomposer-landing-page-builder", "pageType": "homepage", "provenance": "Vendor's own production Shopify store, observed loading cdn.ecomposer.app", "missingEvidenceState": "INCONCLUSIVE" },
+    { "id": "printful-demo-personalized-product", "url": "https://printful-demo-store.myshopify.com/collections/personalized-products/products/upload-your-own-image-and-text-customizable-unisex-t-shirt", "appId": "printful", "pageType": "product", "provenance": "Official Printful Shopify App Store demo store, Product Personalizer-enabled product page", "missingEvidenceState": "INCONCLUSIVE" },
+    { "id": "tiendafuji-releasit", "url": "https://tiendafuji.store/products/cuadernos-caligrafia-magica-reutilizables", "appId": "releasit-cod-form-upsells", "pageType": "product", "provenance": "Public storefront listed as a Releasit user by storeleads.app, observed on product page", "missingEvidenceState": "INCONCLUSIVE" },
+    { "id": "ironbullstrength-shopify-inbox", "url": "https://ironbullstrength.com/", "appId": "shopify-inbox", "pageType": "homepage", "provenance": "Public storefront listed as a Shopify Inbox user by storeleads.app, observed with <shopify-chat> app embed", "missingEvidenceState": "INCONCLUSIVE" }
+  ]
+}
+

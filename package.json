@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "test:apps": "node tests/run-validation.js --mode fixtures",
+    "test:apps:live": "node tests/run-validation.js --mode live",
+    "test:apps:all": "node tests/run-validation.js --mode all",
+    "investigate:apps": "node tests/investigate-failures.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}

@@ -1,0 +1,497 @@
+
+> test:apps:live
+> node tests/run-validation.js --mode live
+
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26)  .PFMRKT2-17630 .subtext {  color: #8C8C8C;height: 0;overflow: hidden;transition: all ease .3s; } .PFMRKT2-17630 .button:hover .subtext {height: 20px; } .PFMRKT2-17630 .button--outline{background: transparent;border-radius: 4px;border: 1px solid rgba(255, 255, 255, 0.10);color: #fff; }  .header-sticky .PFMRKT2-17630 .button--outline { border-radius: 4px;  border: 1px solid rgba(0, 0, 0, 0.08); color: #000000D9;} .header-sticky .PFMRKT2-17630 .button--outline:hover { border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.08); } .header-sticky .PFMRKT2-17630 .subtext {  color: #00000073; } .button_subtext {height:0px;overflow:hidden;transition: all ease .3s; } a.button--desktop:hover .button_subtext {height: 20px; } }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26)  .PFMRKT2-17630 .subtext {  color: #8C8C8C;height: 0;overflow: hidden;transition: all ease .3s; } .PFMRKT2-17630 .button:hover .subtext {height: 20px; } .PFMRKT2-17630 .button--outline{background: transparent;border-radius: 4px;border: 1px solid rgba(255, 255, 255, 0.10);color: #fff; }  .header-sticky .PFMRKT2-17630 .button--outline { border-radius: 4px;  border: 1px solid rgba(0, 0, 0, 0.08); color: #000000D9;} .header-sticky .PFMRKT2-17630 .button--outline:hover { border-radius: 4px; border: 1px solid rgba(0, 0, 0, 0.08); } .header-sticky .PFMRKT2-17630 .subtext {  color: #00000073; } .button_subtext {height:0px;overflow:hidden;transition: all ease .3s; } a.button--desktop:hover .button_subtext {height: 20px; } }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_kiirMw-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_kiirMw-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_kiirMw::before,
+      #Banner-template--17295078064291__image_banner_kiirMw .banner__media::before,
+      #Banner-template--17295078064291__image_banner_kiirMw:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 47.845249755142014%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_kiirMw::before,
+      #Banner-template--17295078064291__image_banner_kiirMw .banner__media::before {
+        padding-bottom: 47.845249755142014%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_KMVng9-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_KMVng9-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_KMVng9::before,
+      #Banner-template--17295078064291__image_banner_KMVng9 .banner__media::before,
+      #Banner-template--17295078064291__image_banner_KMVng9:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 125.0%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_KMVng9::before,
+      #Banner-template--17295078064291__image_banner_KMVng9 .banner__media::before {
+        padding-bottom: 125.0%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_QcN3VM-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_QcN3VM-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_QcN3VM::before,
+      #Banner-template--17295078064291__image_banner_QcN3VM .banner__media::before,
+      #Banner-template--17295078064291__image_banner_QcN3VM:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 49.19571045576407%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_QcN3VM::before,
+      #Banner-template--17295078064291__image_banner_QcN3VM .banner__media::before {
+        padding-bottom: 49.19571045576407%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_8RxKpy-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_8RxKpy-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_8RxKpy::before,
+      #Banner-template--17295078064291__image_banner_8RxKpy .banner__media::before,
+      #Banner-template--17295078064291__image_banner_8RxKpy:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 120.77294685990339%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_8RxKpy::before,
+      #Banner-template--17295078064291__image_banner_8RxKpy .banner__media::before {
+        padding-bottom: 120.77294685990339%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_CTQWzD-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_CTQWzD-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_CTQWzD::before,
+      #Banner-template--17295078064291__image_banner_CTQWzD .banner__media::before,
+      #Banner-template--17295078064291__image_banner_CTQWzD:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 49.19571045576407%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_CTQWzD::before,
+      #Banner-template--17295078064291__image_banner_CTQWzD .banner__media::before {
+        padding-bottom: 49.19571045576407%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_7V7Enb-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_7V7Enb-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_7V7Enb::before,
+      #Banner-template--17295078064291__image_banner_7V7Enb .banner__media::before,
+      #Banner-template--17295078064291__image_banner_7V7Enb:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 120.77294685990339%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_7V7Enb::before,
+      #Banner-template--17295078064291__image_banner_7V7Enb .banner__media::before {
+        padding-bottom: 120.77294685990339%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_kiirMw-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_kiirMw-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_kiirMw::before,
+      #Banner-template--17295078064291__image_banner_kiirMw .banner__media::before,
+      #Banner-template--17295078064291__image_banner_kiirMw:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 47.845249755142014%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_kiirMw::before,
+      #Banner-template--17295078064291__image_banner_kiirMw .banner__media::before {
+        padding-bottom: 47.845249755142014%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_KMVng9-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_KMVng9-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_KMVng9::before,
+      #Banner-template--17295078064291__image_banner_KMVng9 .banner__media::before,
+      #Banner-template--17295078064291__image_banner_KMVng9:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 125.0%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_KMVng9::before,
+      #Banner-template--17295078064291__image_banner_KMVng9 .banner__media::before {
+        padding-bottom: 125.0%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_QcN3VM-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_QcN3VM-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_QcN3VM::before,
+      #Banner-template--17295078064291__image_banner_QcN3VM .banner__media::before,
+      #Banner-template--17295078064291__image_banner_QcN3VM:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 49.19571045576407%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_QcN3VM::before,
+      #Banner-template--17295078064291__image_banner_QcN3VM .banner__media::before {
+        padding-bottom: 49.19571045576407%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_8RxKpy-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_8RxKpy-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_8RxKpy::before,
+      #Banner-template--17295078064291__image_banner_8RxKpy .banner__media::before,
+      #Banner-template--17295078064291__image_banner_8RxKpy:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 120.77294685990339%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_8RxKpy::before,
+      #Banner-template--17295078064291__image_banner_8RxKpy .banner__media::before {
+        padding-bottom: 120.77294685990339%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_CTQWzD-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_CTQWzD-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_CTQWzD::before,
+      #Banner-template--17295078064291__image_banner_CTQWzD .banner__media::before,
+      #Banner-template--17295078064291__image_banner_CTQWzD:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 49.19571045576407%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_CTQWzD::before,
+      #Banner-template--17295078064291__image_banner_CTQWzD .banner__media::before {
+        padding-bottom: 49.19571045576407%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26) .section-template--17295078064291__image_banner_7V7Enb-margin {
+      margin-top:  0px;
+      margin-bottom:  0px;
+    }
+    @media screen and (min-width: 750px) {
+      .section-template--17295078064291__image_banner_7V7Enb-margin {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+      #Banner-template--17295078064291__image_banner_7V7Enb::before,
+      #Banner-template--17295078064291__image_banner_7V7Enb .banner__media::before,
+      #Banner-template--17295078064291__image_banner_7V7Enb:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: 120.77294685990339%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-template--17295078064291__image_banner_7V7Enb::before,
+      #Banner-template--17295078064291__image_banner_7V7Enb .banner__media::before {
+        padding-bottom: 120.77294685990339%;
+        content: '';
+        display: block;
+      }
+    }
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26)  #shopify-section-template--19643885387945__benefits_strip_W8gpeQ.benefits-section p {font-size: 17px; color: #fff;} @media (max-width: 767px) {#shopify-section-template--19643885387945__benefits_strip_W8gpeQ.benefits-section p {font-size: 14px; }} {position: sticky; top: calc(var(--announcement-bar-height, 0px) + var(--header-height, 0px)); z-index: 30;} 
+Error: Could not parse CSS stylesheet
+    at exports.createStylesheet (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/helpers/stylesheets.js:37:21)
+    at HTMLStyleElementImpl._updateAStyleBlock (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:67:5)
+    at HTMLStyleElementImpl._poppedOffStackOfOpenElements (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/living/nodes/HTMLStyleElement-impl.js:41:10)
+    at JSDOMParse5Adapter.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/jsdom/lib/jsdom/browser/parser/html.js:175:43)
+    at Parser.onItemPop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:176:90)
+    at OpenElementStack.pop (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/open-element-stack.js:83:22)
+    at endTagInText (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:2353:20)
+    at Parser._endTagOutsideForeignContent (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:992:17)
+    at Parser.onEndTag (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/parser/index.js:957:18)
+    at Tokenizer.emitCurrentTagToken (/Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/node_modules/parse5/dist/cjs/tokenizer/index.js:385:26)  #shopify-section-template--19643885387945__benefits_strip_W8gpeQ.benefits-section p {font-size: 17px; color: #fff;} @media (max-width: 767px) {#shopify-section-template--19643885387945__benefits_strip_W8gpeQ.benefits-section p {font-size: 14px; }} {position: sticky; top: calc(var(--announcement-bar-height, 0px) + var(--header-height, 0px)); z-index: 30;} 
+PASS: 7
+FAIL: 0
+INCONCLUSIVE: 2
+FALSE POSITIVE: 0
+RESULTS: /Users/ahmadmujtaba/Projects/Codex/shopify-dev-inspector/test-results/validation-live.json

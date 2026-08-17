@@ -1,0 +1,29 @@
+{
+  "requiredAppIds": ["klaviyo", "judge-me", "yotpo", "recharge", "privy", "vitals", "loox", "smile", "gorgias", "aftership", "algolia", "omnisend", "tidio", "reconvert-upsell-cross-sell", "stamped-product-reviews-ugc", "instafeed", "shopify-inbox", "17track-order-tracking", "pagefly-landing-page-builder", "ecomposer-landing-page-builder", "replo", "releasit-cod-form-upsells", "microsoft-clarity", "hotjar", "triple-whale", "printful"],
+  "cases": [
+    { "id": "clean-storefront-negative", "fixture": "negative/clean-shopify.html", "pageType": "homepage", "expect": "all-undetected", "provenance": "Control fixture with no third-party app signals." },
+    { "id": "klaviyo-positive", "fixture": "positive/klaviyo.html", "appId": "klaviyo", "pageType": "homepage", "provenance": "Klaviyo storefront script URL." },
+    { "id": "judge-me-positive", "fixture": "positive/judge-me.html", "appId": "judge-me", "pageType": "product", "provenance": "Judge.me CDN widget resource." },
+    { "id": "yotpo-positive", "fixture": "positive/yotpo.html", "appId": "yotpo", "pageType": "product", "provenance": "Yotpo static widget resource." },
+    { "id": "recharge-positive", "fixture": "positive/recharge.html", "appId": "recharge", "pageType": "product", "provenance": "Recharge documented storefront asset." },
+    { "id": "privy-positive", "fixture": "positive/privy.html", "appId": "privy", "pageType": "homepage", "provenance": "Privy vendor-hosted widget resource." },
+    { "id": "vitals-positive", "fixture": "positive/vitals.html", "appId": "vitals", "pageType": "product", "provenance": "Vitals CDN resource." },
+    { "id": "loox-positive", "fixture": "positive/loox.html", "appId": "loox", "pageType": "product", "provenance": "Loox review widget resource." },
+    { "id": "smile-positive", "fixture": "positive/smile.html", "appId": "smile", "pageType": "homepage", "provenance": "Smile.io CDN SDK resource." },
+    { "id": "gorgias-positive", "fixture": "positive/gorgias.html", "appId": "gorgias", "pageType": "homepage", "provenance": "Gorgias asset resource." },
+    { "id": "aftership-positive", "fixture": "positive/aftership.html", "appId": "aftership", "pageType": "tracking", "provenance": "AfterShip button SDK resource." },
+    { "id": "algolia-positive", "fixture": "positive/algolia.html", "appId": "algolia", "pageType": "search", "provenance": "Algolia InstantSearch DOM markup." },
+    { "id": "omnisend-positive", "fixture": "positive/omnisend.html", "appId": "omnisend", "pageType": "homepage", "provenance": "Omnisend official inline snippet marker." },
+    { "id": "tidio-positive", "fixture": "positive/tidio.html", "appId": "tidio", "pageType": "homepage", "provenance": "Tidio chat loader resource." },
+    { "id": "stamped-positive", "fixture": "positive/stamped.html", "appId": "stamped-product-reviews-ugc", "pageType": "product", "provenance": "Stamped official widget script." },
+    { "id": "shopify-inbox-positive", "fixture": "positive/shopify-inbox.html", "appId": "shopify-inbox", "pageType": "homepage", "provenance": "Shopify Inbox chat root." },
+    { "id": "17track-positive", "fixture": "positive/17track.html", "appId": "17track-order-tracking", "pageType": "tracking", "provenance": "17TRACK official external widget script." },
+    { "id": "pagefly-positive", "fixture": "positive/pagefly.html", "appId": "pagefly-landing-page-builder", "pageType": "landing", "provenance": "PageFly documented DOM structure." },
+    { "id": "replo-positive", "fixture": "positive/replo.html", "appId": "replo", "pageType": "landing", "provenance": "Replo documented CDN resource." },
+    { "id": "releasit-positive", "fixture": "positive/releasit.html", "appId": "releasit-cod-form-upsells", "pageType": "product", "provenance": "Releasit integration hook." },
+    { "id": "clarity-positive", "fixture": "positive/clarity.html", "appId": "microsoft-clarity", "pageType": "homepage", "provenance": "Microsoft Clarity official snippet." },
+    { "id": "hotjar-positive", "fixture": "positive/hotjar.html", "appId": "hotjar", "pageType": "homepage", "provenance": "Hotjar official snippet configuration." },
+    { "id": "triple-whale-positive", "fixture": "positive/triple-whale.html", "appId": "triple-whale", "pageType": "homepage", "provenance": "Triple Whale Pixel data assignment." },
+    { "id": "klaviyo-duplicate-regression", "fixture": "duplicates/klaviyo-multi-signal.html", "appId": "klaviyo", "pageType": "homepage", "expectSingleResultFor": "klaviyo", "provenance": "Two Klaviyo fingerprints must aggregate to one result." }
+  ]
+}

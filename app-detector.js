@@ -8,6 +8,15 @@ const fingerprintMatchers = {
   scriptDomain: (pageData, pattern) =>
     pageData.scriptDomains.some((domain) => pattern.test(domain)),
 
+  // Includes stylesheets, iframe URLs, and other externally loaded resources.
+  // This is intentionally separate from scriptUrl so a fingerprint can be as
+  // narrow as the vendor's integration requires.
+  resourceUrl: (pageData, pattern) =>
+    pageData.resourceUrls.some((url) => pattern.test(url)),
+
+  inlineScript: (pageData, pattern) =>
+    pageData.inlineScripts.some((script) => pattern.test(script)),
+
   globalVar: (pageData, variableName) =>
     pageData.globals.some((globalName) => globalName === variableName),
 
@@ -40,6 +49,15 @@ function collectPageData() {
     })
     .filter(Boolean);
 
+  const resourceUrls = Array.from(document.querySelectorAll('[src], link[href]'))
+    .map((element) => element.src || element.href)
+    .filter(Boolean)
+    .map((url) => url.toLowerCase());
+
+  const inlineScripts = Array.from(document.scripts)
+    .filter((script) => !script.src)
+    .map((script) => script.textContent || '');
+
   const globals = Object.keys(window || {}).filter(Boolean);
 
   const metaTags = Array.from(document.querySelectorAll('meta')).map((meta) =>
@@ -49,6 +67,8 @@ function collectPageData() {
   return {
     scriptUrls,
     scriptDomains,
+    resourceUrls,
+    inlineScripts,
     globals,
     metaTags
   };
