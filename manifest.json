@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Shopify Dev Inspector",
   "version": "2.0.0",
-  "description": "Inspect Shopify stores, detect themes and Hydrogen storefronts, identify 26 popular Shopify apps with tested detection, and view key store information.",
+  "description": "Inspect Shopify stores, detect themes and Hydrogen, view key store info, and identify 26 tested Shopify apps.",
   "permissions": ["activeTab", "scripting"],
   "host_permissions": ["<all_urls>"],
 
