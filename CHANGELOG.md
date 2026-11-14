@@ -1,4 +1,4 @@
-## Version 2.0.1
+## Version 2.2.1
 
 - Removed unused `scripting` permission (Chrome Web Store: Use of Permissions)
 - Removed the `scripting` section from the privacy policy
