@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
   "name": "Shopify Dev Inspector",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Inspect Shopify stores, detect themes and Hydrogen, view key store info, and identify 26 tested Shopify apps.",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab"],
   "host_permissions": ["<all_urls>"],
 
   "icons": {
