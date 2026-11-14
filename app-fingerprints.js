@@ -238,9 +238,15 @@ window.SHOPIFY_APP_FINGERPRINTS = [
       },
       {
         type: 'selector',
-        match: '#looxReviews, [data-rwidget-id], .loox-reviews-container, [class*="loox-"]',
+        match: '#looxReviews, .loox-reviews-container',
         strength: 'high',
-        description: 'Loox review widget IDs and container selectors'
+        description: 'Loox-specific review widget IDs and container selectors'
+      },
+      {
+        type: 'selector',
+        match: '[data-rwidget-id], [class*="loox-"]',
+        strength: 'weak',
+        description: 'Loox-associated widget attributes and class namespace'
       },
       {
         type: 'selector',
@@ -967,6 +973,480 @@ window.SHOPIFY_APP_FINGERPRINTS = [
         match: /printful\.com\/static\/js\/external\/shopify-product-customizer/i,
         strength: 'high',
         description: 'Printful Product Personalizer/Customizer script (proxied via cdn.shopify.com)'
+      }
+    ]
+  },
+  {
+    id: 'rebuy-personalization-engine',
+    name: 'Rebuy Personalization Engine',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)rebuyengine\.com$/i,
+        strength: 'high',
+        description: 'Rebuy vendor storefront script domain'
+      },
+      {
+        type: 'selector',
+        match: '[class^="rebuy-"], [class*=" rebuy-"]',
+        strength: 'weak',
+        description: 'Rebuy widget markup namespace observed on official demo store'
+      }
+    ]
+  },
+  {
+    id: 'fera-product-reviews',
+    name: 'Fera Product Reviews',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)fera\.ai$/i,
+        strength: 'high',
+        description: 'Fera vendor storefront script domain'
+      },
+      {
+        type: 'selector',
+        match: '[data-fera], [class^="fera-"], [class*=" fera-"]',
+        strength: 'weak',
+        description: 'Fera review widget markup'
+      }
+    ]
+  },
+  {
+    id: 'bundler-product-bundles',
+    name: 'Bundler - Product Bundles',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)cdn-bundler\.nice-team\.net$/i,
+        strength: 'high',
+        description: 'Bundler vendor CDN domain observed on official demo store'
+      },
+      {
+        type: 'scriptUrl',
+        match: /cdn-bundler\.nice-team\.net\/app\/js\/bundler(?:-script)?\.js/i,
+        strength: 'high',
+        description: 'Bundler storefront script URL'
+      },
+      {
+        type: 'globalVar',
+        match: 'bundler_settings_updated',
+        strength: 'weak',
+        description: 'Bundler storefront event/global marker'
+      }
+    ]
+  },
+  {
+    id: 'glo-color-swatch-variant-image',
+    name: 'GLO Color Swatch, Variant Image',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/glo-color-swatch-\d+\/assets\/globoswatch\.js/i,
+        strength: 'high',
+        description: 'GLO Color Swatch Shopify extension runtime script'
+      },
+      {
+        type: 'selector',
+        match: 'html.gsw-swatch-installed',
+        strength: 'high',
+        description: 'GLO Color Swatch installation marker on the document root'
+      },
+      {
+        type: 'globalVar',
+        match: 'GloboSwatch',
+        strength: 'high',
+        description: 'GLO Color Swatch runtime global object'
+      }
+    ]
+  },
+  {
+    id: 'searchanise',
+    name: 'Searchanise Search & Filter',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)searchanise-[a-z0-9]+\.kxcdn\.com$/i,
+        strength: 'high',
+        description: 'Searchanise storefront CDN domain'
+      },
+      {
+        type: 'scriptUrl',
+        match: /searchanise-[a-z0-9]+\.kxcdn\.com\/widgets\/shopify\/init\.js/i,
+        strength: 'high',
+        description: 'Searchanise Shopify widget initializer'
+      },
+      {
+        type: 'selector',
+        match: '.searchanise-recommendations, [data-searchanise], [class*="searchanise-"]',
+        strength: 'weak',
+        description: 'Searchanise storefront widget markup'
+      }
+    ]
+  },
+  {
+    id: 'smart-product-filter-search',
+    name: 'Smart Product Filter & Search by Globo',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/smart-product-filters-\d+\/assets\//i,
+        strength: 'high',
+        description: 'Globo Smart Product Filter Shopify extension asset URL'
+      },
+      {
+        type: 'resourceUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/smart-product-filters-\d+\/assets\/globo-filter[^/]*\.css/i,
+        strength: 'high',
+        description: 'Globo Smart Product Filter stylesheet URL'
+      },
+      {
+        type: 'selector',
+        match: '[class*="globo-filter"], [id*="globo-filter"], [data-globo-filter]',
+        strength: 'weak',
+        description: 'Globo Smart Product Filter-associated storefront markup'
+      }
+    ]
+  },
+  {
+    id: 'boost-ai-search-filter',
+    name: 'Boost AI Search & Filter',
+    fingerprints: [
+      {
+        type: 'globalVar',
+        match: 'boostWidgetIntegration',
+        strength: 'high',
+        description: 'Boost Commerce storefront integration global'
+      },
+      {
+        type: 'selector',
+        match: '.boost-sd-container, .boost-sd-layout, [data-boost-sd]',
+        strength: 'high',
+        description: 'Boost Commerce search and filter widget markup'
+      }
+    ]
+  },
+  {
+    id: 'cookieyes-gdpr-cookie-banner',
+    name: 'CookieYes GDPR Cookie Banner',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)cdn-cookieyes\.com$/i,
+        strength: 'high',
+        description: 'CookieYes client script domain'
+      },
+      {
+        type: 'resourceUrl',
+        match: /cdn-cookieyes\.com\/client_data\//i,
+        strength: 'high',
+        description: 'CookieYes client configuration resource URL'
+      },
+      {
+        type: 'selector',
+        match: '#cookie-law-info-bar, [data-cookieyes], [class*="cookieyes"]',
+        strength: 'weak',
+        description: 'CookieYes consent banner markup'
+      }
+    ]
+  },
+  {
+    id: 'hextom-free-shipping-bar',
+    name: 'Hextom: Free Shipping Bar',
+    fingerprints: [
+      {
+        type: 'selector',
+        match: '[data-block-handle="fsb-embeded-block"]',
+        strength: 'high',
+        description: 'Hextom Free Shipping Bar Shopify app block handle'
+      },
+      {
+        type: 'selector',
+        match: '#fsb_progress_img',
+        strength: 'high',
+        description: 'Hextom Free Shipping Bar progress image marker'
+      }
+    ]
+  },
+  {
+    id: 'consentmo-gdpr-compliance',
+    name: 'Consentmo GDPR Compliance',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)cdn\.consentmo\.com$/i,
+        strength: 'high',
+        description: 'Consentmo vendor CDN domain'
+      },
+      {
+        type: 'resourceUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/gdpr-backpack-\d+\/assets\/[^/]+\.consentmo\.js/i,
+        strength: 'high',
+        description: 'Consentmo Shopify extension asset URL'
+      },
+      {
+        type: 'globalVar',
+        match: 'Consentmo',
+        strength: 'weak',
+        description: 'Consentmo storefront global marker'
+      }
+    ]
+  },
+  {
+    id: 'ali-reviews',
+    name: 'Ali Reviews - Product Reviews',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/ali-reviews-\d+\/assets\/alireviews\.min\.js/i,
+        strength: 'high',
+        description: 'Ali Reviews Shopify extension script URL'
+      },
+      {
+        type: 'selector',
+        match: '[class^="alireviews-"], [class*=" alireviews-"]',
+        strength: 'high',
+        description: 'Ali Reviews widget class namespace observed on official demo'
+      },
+      {
+        type: 'resourceUrl',
+        match: /imgs\.alireviews\.io\//i,
+        strength: 'high',
+        description: 'Ali Reviews image resource domain'
+      }
+    ]
+  },
+  {
+    id: 'appstle-subscriptions',
+    name: 'Appstle Subscriptions',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)subscription-admin\.appstle\.com$/i,
+        strength: 'high',
+        description: 'Appstle subscription storefront script domain'
+      },
+      {
+        type: 'scriptUrl',
+        match: /subscription-admin\.appstle\.com\/.*appstle-(?:subscription|storefront|discount)/i,
+        strength: 'high',
+        description: 'Appstle vendor-hosted storefront script'
+      },
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/appstle-add-to-subscription-widget-\d+\/assets\//i,
+        strength: 'high',
+        description: 'Appstle Subscriptions Shopify extension asset path'
+      }
+    ]
+  },
+  {
+    id: 'seal-subscriptions',
+    name: 'Seal Subscriptions',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)cdn-app\.sealsubscriptions\.com$/i,
+        strength: 'high',
+        description: 'Seal Subscriptions vendor CDN domain'
+      },
+      {
+        type: 'scriptUrl',
+        match: /cdn-app\.sealsubscriptions\.com\/shopify\/public\/js\/sealsubscriptions(?:-main)?\.js/i,
+        strength: 'high',
+        description: 'Seal Subscriptions storefront script'
+      }
+    ]
+  },
+  {
+    id: 'upcart-cart-drawer-upsell',
+    name: 'UpCart Cart Drawer Cart Upsell',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/cart-drawer-cart-upsell-\d+\/assets\/app\.js/i,
+        strength: 'high',
+        description: 'UpCart Shopify extension runtime script'
+      }
+    ]
+  },
+  {
+    id: 'globo-product-options',
+    name: 'Globo Product Options, Variant',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/globo-product-options-\d+\/assets\/gpomain\.js/i,
+        strength: 'high',
+        description: 'Globo Product Options Shopify extension runtime script'
+      }
+    ]
+  },
+  {
+    id: 'zepto-product-personalizer',
+    name: 'Zepto Product Personalizer',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)cdn-zeptoapps\.com$/i,
+        strength: 'high',
+        description: 'Zepto Apps vendor CDN domain'
+      },
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/product-personalizer-\d+\/assets\/pplr_common\.js/i,
+        strength: 'high',
+        description: 'Zepto Product Personalizer Shopify extension script'
+      },
+      {
+        type: 'scriptUrl',
+        match: /cdn-zeptoapps\.com\/product-personalizer\/pplr_common\.js/i,
+        strength: 'high',
+        description: 'Zepto Product Personalizer vendor script'
+      }
+    ]
+  },
+  {
+    id: 'globo-mega-menu',
+    name: 'Globo Mega Menu, Navigation',
+    fingerprints: [
+      {
+        type: 'resourceUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/frontend-\d+\/assets\/globo\.menu\.replace\.js/i,
+        strength: 'high',
+        description: 'Globo Mega Menu Shopify extension runtime script'
+      },
+      {
+        type: 'inlineScript',
+        match: /window\.GloboMenus\s*=\s*window\.GloboMenus/i,
+        strength: 'high',
+        description: 'Globo Mega Menu initialization object'
+      }
+    ]
+  },
+  {
+    id: 'aftersell-post-purchase-upsell',
+    name: 'Aftersell Post Purchase Upsell',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/aftersell-\d+\/assets\/aftersell-cart\.js/i,
+        strength: 'high',
+        description: 'Aftersell Shopify extension cart runtime script'
+      },
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/aftersell-\d+\/assets\/aftersell-utm-triggers\.js/i,
+        strength: 'high',
+        description: 'Aftersell Shopify extension trigger script'
+      }
+    ]
+  },
+  {
+    id: 'qikify-mega-menu',
+    name: 'Qikify Mega Menu & Navigation',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/smart-menu-\d+\/assets\/smartmenu-v2\.js/i,
+        strength: 'high',
+        description: 'Qikify Smart Menu Shopify extension runtime script'
+      }
+    ]
+  },
+  {
+    id: 'doofinder-search-discovery',
+    name: 'Doofinder Search & Discovery',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)eu\d+-config\.doofinder\.com$/i,
+        strength: 'high',
+        description: 'Doofinder storefront configuration script domain'
+      },
+      {
+        type: 'scriptUrl',
+        match: /eu\d+-config\.doofinder\.com\/[0-9a-f-]+\.js/i,
+        strength: 'high',
+        description: 'Doofinder storefront configuration script'
+      }
+    ]
+  },
+  {
+    id: 'globo-preorder-back-in-stock',
+    name: 'PreOrder Globo | Back in Stock',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/frontend-\d+\/assets\/globo\.preorder\.min\.js/i,
+        strength: 'high',
+        description: 'Globo PreOrder Shopify extension runtime script'
+      },
+      {
+        type: 'globalVar',
+        match: 'GloboPreorderParams',
+        strength: 'high',
+        description: 'Globo PreOrder storefront configuration global'
+      },
+      {
+        type: 'globalVar',
+        match: 'globoEmbedPreorderAssetsUrl',
+        strength: 'high',
+        description: 'Globo PreOrder asset configuration global'
+      }
+    ]
+  },
+  {
+    id: 'timesact-preorder-presale',
+    name: 'Preorder Now Presale Timesact',
+    fingerprints: [
+      {
+        type: 'scriptUrl',
+        match: /cdn\.shopify\.com\/extensions\/[^/]+\/timesact-\d+\/assets\/timesactV2\.js/i,
+        strength: 'high',
+        description: 'Timesact Shopify extension runtime script'
+      },
+      {
+        type: 'globalVar',
+        match: 'TimesactData',
+        strength: 'high',
+        description: 'Timesact storefront configuration global'
+      }
+    ]
+  },
+  {
+    id: 'weglot',
+    name: 'Weglot',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)cdn\.weglot\.com$/i,
+        strength: 'high',
+        description: 'Weglot vendor CDN domain'
+      },
+      {
+        type: 'scriptUrl',
+        match: /cdn\.weglot\.com\/weglot\.min\.js/i,
+        strength: 'high',
+        description: 'Weglot storefront translation loader'
+      }
+    ]
+  },
+  {
+    id: 'reamaze',
+    name: 'Re:amaze',
+    fingerprints: [
+      {
+        type: 'scriptDomain',
+        match: /(^|\.)cdn\.reamaze\.com$/i,
+        strength: 'high',
+        description: 'Re:amaze vendor CDN domain'
+      },
+      {
+        type: 'scriptUrl',
+        match: /cdn\.reamaze\.com\/assets\/reamaze\.js/i,
+        strength: 'high',
+        description: 'Re:amaze storefront chat loader'
       }
     ]
   }
