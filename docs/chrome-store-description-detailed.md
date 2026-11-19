@@ -1,51 +1,29 @@
-## Shopify Dev Inspector
+# Shopify Dev Inspector
 
-Shopify Dev Inspector is a lightweight Chrome extension designed for Shopify developers, freelancers, agencies, and store owners who want to quickly inspect Shopify storefronts.
+See how any Shopify store is built, in one click.
 
-With a single click, the extension identifies whether a website is built on Shopify, detects Shopify Hydrogen/Oxygen storefronts, and displays key storefront information without leaving the page.
+Ever land on a store and wonder what theme it uses, whether it's headless, or which apps power it? Shopify Dev Inspector answers those questions instantly, without opening DevTools or reading page source.
 
-### Features
+## What it does
 
-✔ Detect Shopify stores
+Open the extension on any website and it tells you whether the site runs on Shopify. On a Shopify store it shows:
 
-✔ Detect Shopify Hydrogen/Oxygen storefronts
+• Whether the storefront is a standard Shopify theme or a Hydrogen/Oxygen headless build
+• The theme name and version, when the store exposes them
+• The store's language and currency
+• Popular Shopify apps detected on the page, such as Klaviyo, using storefront fingerprints we've tested
 
-✔ Display Shopify theme name (when available)
+## Why install it
 
-✔ Display theme version (when available)
+• Research competitors and inspiration stores in seconds
+• Check a client's or prospect's store before a call or quote
+• Confirm which theme and apps a store is running before you rebuild or audit it
+• Skip manual source-code digging when you only need quick answers
 
-✔ Display store language
+## Who it's for
 
-✔ Display store currency
+Shopify developers, freelancers, agencies, store owners and e-commerce professionals.
 
-✔ Fast and lightweight
+## Privacy
 
-✔ Simple one-click interface
-
-### Who is it for?
-
-• Shopify Developers
-
-• Shopify Freelancers
-
-• Shopify Agencies
-
-• Shopify Store Owners
-
-• E-commerce Professionals
-
-### Privacy
-
-Shopify Dev Inspector does not collect personal information or browsing history.
-
-All processing is performed locally within your browser. No data is transmitted to external servers.
-
-### Coming Soon
-
-We're actively improving Shopify Dev Inspector. Future updates may include:
-
-• Shopify app detection
-
-• Additional storefront insights
-
-• More developer-focused tools
+The extension only reads the page you open it on. All detection runs locally in your browser. It collects no personal data or browsing history and sends nothing to external servers.

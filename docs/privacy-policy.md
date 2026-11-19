@@ -46,10 +46,6 @@ The extension requests the following Chrome permissions:
 
 Used to inspect the currently active webpage after the user opens the extension.
 
-### scripting
-
-Used to read publicly available Shopify information from the active webpage.
-
 ### host_permissions
 
 Required to inspect Shopify storefront information on websites that the user chooses to visit.
